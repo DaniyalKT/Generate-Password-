@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'GeneratePassword';
+  Password: string
+
+  constructor(){
+    this.Password = ''
+  }
+
+  OnButtonClick() {
+    this.Password = "Your Password!"
+  }
+
+  getPassword(){
+    return this.Password
+  }
 }
