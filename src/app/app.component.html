@@ -1,31 +1,47 @@
-<div>
-  <h1>Password Generator</h1>
+<div class="container mt-6">
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title has-text-centered">Password Generator</h1>
+      <div class="field">
+        <label for="">Lenght</label><br>
+        <input class="input" type="text" (input)="onChangeLenght($event)">
+      </div>
 
-  <div>
-    <label for="">Lenght</label>
-    <input type="text" (input)="onChangeLenght($event)">
-  </div>
+      <div class="filed">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" (change)="onChangeLatter()">
+            Use Latter
+          </label>
+        </div>
+      </div>
+      <div class="filed">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" (change)="onChangeNumbers()">
+            Use Numbers
+          </label>
+        </div>
+      </div>
+      <div class="filed">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" (change)="onChangeSymbols()">
+            Use Symbols
+          </label>
+        </div>
+      </div>
+      <br>
+      <button class="button is-link is-fullwidth"
+        [disabled]="!(lenght && (ChangeLatter || ChangeNumbers || ChangeSymbols))"
+        (click)="OnButtonClick()">Generate!</button>
 
-  <div>
-    <label for="">Use Latter</label>
-    <input type="checkbox" (change)="onChangeLatter()">
-  </div>
 
-  <div>
-    <label for="">Use Numbers</label>
-    <input type="checkbox" (change)="onChangeNumbers()">
-  </div>
+      <div class="box">
+        <label for="">Password</label>
+        <input class="input" type="text" [value]="Password ">
+      </div>
 
-  <div>
-    <label for="">Use Symbols</label>
-    <input type="checkbox" (change)="onChangeSymbols()">
-  </div>
-
-  <button (click)="OnButtonClick()">Generate!</button>
-
-  <div>
-    <label for="">Password</label>
-    <input type="text" [value]="Password " >
+    </div>
   </div>
 </div>
-

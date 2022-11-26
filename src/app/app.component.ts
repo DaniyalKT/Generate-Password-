@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   OnButtonClick() {
-    debugger
+    
     const Numbers = '0123456789'
     const latters = 'abcdefghijklmnopqrstuvwxyz'
     const symbols = '!@#$%^&*()_+/~'
