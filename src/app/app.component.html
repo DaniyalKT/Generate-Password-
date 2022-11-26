@@ -3,29 +3,29 @@
 
   <div>
     <label for="">Lenght</label>
-    <input type="number">
+    <input type="text" (input)="onChangeLenght($event)">
   </div>
 
   <div>
     <label for="">Use Latter</label>
-    <input type="checkbox">
+    <input type="checkbox" (change)="onChangeLatter()">
   </div>
 
   <div>
     <label for="">Use Numbers</label>
-    <input type="checkbox">
+    <input type="checkbox" (change)="onChangeNumbers()">
   </div>
 
   <div>
     <label for="">Use Symbols</label>
-    <input type="checkbox">
+    <input type="checkbox" (change)="onChangeSymbols()">
   </div>
 
   <button (click)="OnButtonClick()">Generate!</button>
 
   <div>
-    <label for="">Your Password</label>
-    <input [value]="getPassword()" type="text" >
-
-  </div> 
+    <label for="">Password</label>
+    <input type="text" [value]="Password " >
+  </div>
 </div>
+
