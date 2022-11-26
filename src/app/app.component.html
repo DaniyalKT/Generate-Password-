@@ -37,7 +37,7 @@
         (click)="OnButtonClick()">Generate!</button>
 
 
-      <div class="box">
+      <div class="box" *ngIf="Password">
         <label for="">Password</label>
         <input class="input" type="text" [value]="Password ">
       </div>

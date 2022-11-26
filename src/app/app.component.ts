@@ -6,15 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  Password: string
+  Password: string = ''
   ChangeNumbers: boolean = false
   ChangeLatter: boolean = false
   ChangeSymbols: boolean = false
   lenght: number = 0
 
-  constructor() {
-    this.Password = ''
-  }
+  constructor() {}
 
   OnButtonClick() {
     
@@ -36,7 +34,7 @@ export class AppComponent {
       let index = Math.floor(Math.random() * validChar.length)
       generatedPassword += validChar[index]
     }
-    this.Password += generatedPassword
+    this.Password = generatedPassword
   }
 
   onChangeNumbers() {
